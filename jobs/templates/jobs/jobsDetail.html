@@ -1,0 +1,328 @@
+{% load static %}
+{% block content %}
+
+
+<html>
+
+        <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                
+                <!-- STYLESHEETS -->
+                <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/jobDetail.css' %}" />
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+                integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+                crossorigin="anonymous">
+              
+                <!-- JAVASCRIPT -->
+                <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+              
+                <!-- FONTS -->
+                <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+              
+        </head>
+
+        <body>
+            
+        <!-- HAMBURGER MENU -->
+        <div class="navigation d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
+            <div class="container">
+              <nav class="container row align-items-start">
+                <div class="col-sm-3 col-md-8 navBarElements">
+                    <ul>
+                      <li><a href="{% url 'index'  %}"><b>home</b></a></li>
+                      <li><a href="{% url 'index'  %}"><b>about</b></a></li>
+                      <li><a href="{% url 'blog'  %}"><b>blog</b></a></li>
+                      <li><a href="{% url 'collegeblog'  %}"><b>college</b></a></li>
+                      <li><a href="{% url 'job'  %}"><b>jobs</b></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-8 aboutInNavBar">
+                  <span class="aboutOdin"><b>About OdinAI</b></span><br>
+                  OdinAI is here to help.
+                  We help you efficiently learn Deep Learning and get that Deep Learning job!
+                </div>
+                <div class="col-sm-3 col-md-8 contactInNavBar">
+                    <span class="contactInfo"><b>Contact</b></span><br>
+                    
+                      <a href="#">hello@odinai.org</a><br>
+                      <a href="#">LinkedIn</a>
+                    
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="menu d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
+            <div>
+              <div class="menu-trigger">
+                <div class="bar bar--1"></div>
+                <div class="bar bar--2"></div>
+                <div class="bar bar--3"></div>
+              </div>
+            </div>
+          </div> 
+      
+        <!-- NAVIGATION BAR -->
+        <div class="d-none d-lg-block d-xl-none d-none d-xl-block">
+            <div class="navigationfull row">
+                <div class="col-md-0 col-lg-1 col-xl-1 navBarElements"></div>
+                <div class="col-md-2 col-xl-1 navBarElements justify-content-end align-items-center">
+                    <img src="{% static 'images/odinai-transparent.png' %}" class="odinAILogoNavBar"/>
+                </div>
+                <div class="col-md-3 col-xl-4 navBarElements"></div>
+                <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
+                  <a href="{% url 'index'  %}">home</a>
+                </div>
+                <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
+                  <a href="{% url 'index'  %}">about</a>
+                </div>
+                <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
+                  <a href="{% url 'blog'  %}">blog</a>
+                </div>
+                <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
+                  <a href="{% url 'collegeblog'  %}">college</a>
+                </div>
+                <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
+                  <a href="{% url 'job'  %}">jobs</a>
+                </div>
+                <div class="col-md-0 col-lg-1 col-xl-1 navBarElements"></div>
+            </div>
+          </div>
+
+
+
+          <!-- JOB POSTS  -->
+
+          <div class="blogPostsContainer d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
+             <div class="container blogPage">
+                
+                  <div class="row rowWrapper"> 
+                    <div class="col"></div>
+                    <div class="col-10">
+                        <div class="postImage"><img src="/media/{{JPosts.logo}}" id="postImageID"/></div>
+                        <div class="postTitle">{{JPosts.jobtitle}}</div>
+                        <div class="AuthorDetailsSM">{{JPosts.companyname}}</div>
+                        <button type="button" class="btnSM btn btn-dark btn-link">Apply</button>
+                        <hr/> 
+                        <div class="AuthorDetailsSM"><b>Required Experience</b><br>{{JPosts.requiredexperience | safe}}</div>
+                        <div class="AuthorDetailsSM"><b>Location</b><br>{{JPosts.location | safe}}</div>
+                        <div class="AuthorDetailsSM"><b>Compensation</b><br>{{JPosts.salary | safe}}</div>
+                        <div class="AuthorDetailsSM"><b>Posted on:</b><br>{{JPosts.created_at|date:"d M Y"}}</div>
+                        <hr/> 
+                        
+                        <div class="JDTitleSM">Job Description</div>
+                        <div class="JobDescriptionSM">{{JPosts.jobdescription | safe}}</div>
+                        <div class="JDTitleSM">Required Qualifications</div>
+                        <div class="JobDescriptionSM">{{JPosts.jobdescription | safe}}</div>
+                    </div>
+                    <div class="col"></div>
+                  </div> 
+              </div>
+          </div>
+
+          <!-- JOB POSTS for XL -->
+
+            <div class="blogPostsContainer d-none d-lg-block d-xl-none d-none d-xl-block">
+                <div class="container blogPage">
+                    <div class="row container rowWrapperXL"> 
+                        <div class="col-8">
+                            <div class="postTitlexl">{{JPosts.jobtitle}}</div>  
+                            <div class="row">
+                                <div class="col-5 jdXL"><b>Required Experience</b><br>{{JPosts.requiredexperience | safe}}</div>
+                                <div class="col-4 jdXL"><b>Location</b><br>{{JPosts.location | safe}}</div>
+                                <div class="col-3 jdXL"><b>Compensation</b><br>{{JPosts.salary | safe}}</div>
+                            </div>
+                            <hr/>
+                            <div class="JDTitle">Job Description</div>
+                            <div class="JobDescriptionXL">{{JPosts.jobdescription | safe}}</div>
+                            <div class="JDTitle">Required Qualifications</div>
+                            <div class="JobDescriptionXL">{{JPosts.jobdescription | safe}}</div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                                <img src="/media/{{JPosts.logo}}" id="companylogo"/>
+                                <div class="JobCompanyXL">{{JPosts.companyname}}</div>
+                                <div class="CompanyDescXL">{{JPosts.companydescription | safe}}</div>
+                                <div class="JobPosterXL">Posted on:<br>{{JPosts.created_at|date:"d M Y"}}</div> 
+                                <button type="button" class="btnXL btn btn-light">Apply</button>
+                            
+                        </div>
+                    </div> 
+            
+                </div>
+            </div>
+          
+      </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footerContainer d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
+        <div class="container footerPage">
+          <div class="row align-items-end fp1">
+            <div class="col"></div>
+            <div class="col-10">
+              About OdinAI
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row align-items-end fp2">
+            <div class="col"></div>
+            <div class="col-10">
+                We help you efficiently learn Deep Learning and get that Deep Learning job. 
+            </div>
+            <div class="col"></div>
+          </div>
+  
+          <div class="row align-items-end fp3">
+              <div class="col"></div>
+              <div class="col-10">
+                Say hi!
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row align-items-end fp4">
+              <div class="col"></div>
+              <div class="col-10">
+                  Feel free to get in touch with us at hello@odinai.org
+              </div>
+              <div class="col"></div>
+            </div>
+        </div>
+      </div>
+  
+      <!-- FOOTER for XL -->
+  
+      <div class="footerContainerXL d-none d-lg-block d-xl-none d-none d-xl-block">
+          <div class="container footerPageXL">
+            <div class="row fp1xl">
+              <div class="col-5 title">
+                OdinAI?
+              </div>
+              <div class="col-2"></div>
+              <div class="col-5 title">
+                Say hi!
+              </div>
+            </div>
+            <div class="row fp2xl">
+              <div class="col-5 content">
+                  All-father. Badass. Norse god of wisdom and knowledge. A defining feature of Odin is his' being one-eyed, a result of him having sacrificed his right eye to drink from the Well of Urðr, which granted him an incomprehensible amount of knowledge of the universe. 
+              </div>
+              <div class="col-2"></div>
+              <div class="col-5 content">Feel free to get in touch with us at hello@odinai.org</div>
+            </div>
+          </div>
+        </div>
+    
+  
+    <script>
+  
+      //SIDE NAVIGATION BAR
+      $(document).ready(function(){
+        function openMenu() {
+          $(".menu-trigger").addClass("open");
+          $(".navigation").addClass("nav-open");
+          $(".col-sm-3").addClass("c-in");
+          $(".col-sm-6").addClass("c-in");
+        }
+        function closeMenu() {
+          $(".menu-trigger").removeClass("open");
+          $(".navigation").removeClass("nav-open");
+          $(".col-sm-3").removeClass("c-in");
+          $(".col-sm-6").removeClass("c-in");
+        }
+        $(".menu-trigger").click(function(){
+          if($(".menu-trigger").hasClass("open")) {
+            closeMenu();
+          }
+          else {
+            openMenu();
+          }
+        });
+        $("main").click(function(){
+          if($(".menu-trigger").hasClass("open")) {
+            closeMenu();
+          }
+        });
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) {
+              closeMenu();
+            }
+        });
+      });
+  
+  
+     
+  
+    </script>
+
+        </body>
+        
+
+        
+    
+        
+
+</html>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+            <div class="col l8">
+                <div class="Posttitle">{{JPosts.jobtitle}}</div>
+                <br>
+                <div class="row">
+                    <div class="col l4 jd"><b>Required Experience</b><br>{{JPosts.requiredexperience | safe}}</div>
+                    <div class="col l4 jd"><b>Location</b><br>{{JPosts.location | safe}}</div>
+                    <div class="col l4 jd"><b>Compensation</b><br>{{JPosts.salary | safe}}</div>
+                </div>
+                <div class="divider"></div>
+                <blockquote>Job Description</blockquote>
+                <div class="JobDescription">{{JPosts.jobdescription | safe}}</div>
+                <blockquote>Required Qualifications</blockquote>
+                <div class="JobDescription">{{JPosts.jobdescription | safe}}</div>
+            </div>
+            <div class="col l1 center"></div>
+            <div class="col l3">
+                <img src="/media/{{JPosts.logo}}" id="companylogo"/>
+                <div class="AuthorDetails">{{JPosts.companyname}}</div>
+                <br>
+                <div class="CompanyDescription">{{JPosts.companydescription | safe}}</div>
+                <br>
+                <div class="Date">Posted on:<br>{{JPosts.created_at|date:"d M Y"}}</div>
+                <br>
+                <a class="waves-effect waves-light btn">Apply</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l3"></div>
+            <div class="col l6">
+                
+            </div>
+            <div class="col l3"></div>
+        </div>
+        <div class="row">
+            <div class="col l10">
+                <div class="PostContent">{{Posts.postcontent | safe}}</div>
+            </div>
+            <div class="col l2"></div>
+        </div>
+
+          
+     -->

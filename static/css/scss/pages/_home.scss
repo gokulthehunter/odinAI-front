@@ -1,0 +1,116 @@
+// main banner[start]
+.main_banner{height: 100vh;@extend %grd_blue;position: relative;overflow: hidden;
+    &_content{position: relative;z-index: 1;
+        &--head{font-weight: bold;font-size: 3.5rem;color: #fff;
+            @media (max-width:1049px){font-size: 2.5rem;}
+            @media (max-width:767px){font-size: 2rem;}
+        }
+        &--desc{font-size: 1rem;color: #e5e5e5;font-weight: lighter;padding-top: 15px;}
+        @media(max-width: 1049px){padding: 0 15px;}
+        @media(max-width: 767px){padding-top: 25%;}
+    }
+    &_img{
+        img{transform: scale(2);opacity: 0.1;}
+    }
+    .topmar{position: absolute;bottom:0;width: 100%;left:0;height: 40%;z-index: 0;
+        #particles-js {position: absolute;width: 100%;height: 100%;}
+        canvas {display: block;vertical-align: bottom;}
+        @media (max-width:992px){display: none;}
+    }
+    @media (max-width:992px){height: 70vh;}
+}
+// main banner[end]
+// common btn[start]
+.common{
+    &--head{color: $color_blue;text-align: center;font-size: 2rem;display: block;font-weight: bold;margin-bottom:0;}
+    &--wave{margin: 0 auto;display: block;width: 75px;}
+}
+.btn-grad{color: #fff;text-transform:uppercase;font-weight:bold;display: block;padding:20px 25px;text-align:center;border-radius:50px;font-size:1.1rem;@extend %box_shadow;@extend %grd_btn_1;background-size: 200% auto;transition: 0.5s;
+    &:hover{background-position: right top;color: #fff;text-decoration: none;}
+}
+// common btn[end]
+// content area[start]
+.content_area{
+    // &_btn{}
+    &_copy{padding: 0 15px;margin-top:20px;text-align:center;
+        p{color: #333;font-size: 0.9rem;}
+    }
+    @media (max-width:1049px){padding: 0 15px;}
+}
+// content area[end]
+// addon content area[start]
+.content_area_articles{background: #fff;
+    .each_articles{padding:75px 0;border-bottom: 1px solid #e5e5e5;
+        &:last-child{border:none;}
+    }
+    &_copy{padding-right: 50px;
+        h3{max-width: 500px;font-size: 1.6rem;font-weight: bold;color: #111;}
+        p{max-width: 500px;margin-bottom: 0;color: #444;}
+        @media (max-width:767px){padding-bottom: 20px;}
+    }
+    //&_img{}
+    @media (max-width:1049px){padding: 15px;}
+}
+// addon content area[end]
+
+// looking job section[start]
+.look_job{@extend %grd_blue_2;
+    &_content{
+        h3{color: #fff;font-size: 2.2rem;font-weight: bold;}
+        p{color: #fff;}
+        a{max-width: 600px;margin:0 auto;font-size: 2rem;margin-top:20px;
+            background-image: linear-gradient(to right, #00C9FF 0%, #92FE9D 51%, #00C9FF 100%);
+        }
+        .btn-grad:hover { background-position: right center;}
+        @media (max-width:767px){padding:0 15px;}
+    }
+}
+// looking job section[end]
+// contributors[start]
+.contributors{
+    &_content{text-align: center;
+        span{color: $color_blue;}
+    }
+    &_img{
+        a{display: inline-block;max-width: 200px;margin:0 auto;@extend %transition;
+            &:hover{transform: scale(1.05);}
+            @media (max-width:767px){padding: 10px 0;}
+        }
+    }
+}
+// contributors[end]
+// teams[start]
+.team{background: #fff;
+    &_members{
+        &_each{padding: 15px 25px;background:#f1f1f1;
+            &--img{display: inline-block;vertical-align: middle;width: 80px;height: 80px;border-radius: 50%;overflow: hidden;}
+            &--content{display: inline-block;vertical-align: middle;padding-left:5px;
+                h4{font-size: 0.9rem;color: #222;margin-bottom: 5px;}
+                p{margin: 0;font-size: 0.8rem;color: #666;}
+            }
+        }
+    }
+}
+// teams[end]
+// about[start]
+.about{
+    &_copy{text-align: center;padding-top:40px;
+        h3{color: $color_blue_dark;}
+        p{color: #444;font-size: 0.9rem;}
+        @media (max-width:767px){padding:15px;}
+    }
+}
+// about[end]
+// contact social[start]
+.contact_social{text-align: center;padding-top:10px;
+    a{font-size:3rem;display: inline-block;margin:0 30px;color: $color_blue;@extend %transition;
+        i{}
+        &:hover{color: $color_blue_dark;}
+    }
+}
+// contact social[end]
+// footer[start]
+.footer_copy{padding: 15px 0;background: #e1e1e1;
+    p{color: #111;font-size: 0.8rem;}
+}
+// footer[end]

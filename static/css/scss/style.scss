@@ -1,0 +1,17 @@
+// partials[start]
+@import 'partials/vars';
+@import 'partials/fonts';
+@import 'partials/mixins';
+@import 'partials/extends';
+@import 'partials/base';
+@import 'partials/common';
+// partials[end]
+
+// commons[start]
+@import 'common/header';
+@import 'common/footer';
+// commons[end]
+
+// pages[start]
+@import 'pages/home'
+// pages[end]

@@ -1,0 +1,411 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>odinAI</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- STYLESHEETS -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/compiled/style.min.css' %}" />
+</head>
+<body>
+  <nav class="main_nav nav-active">
+    <div class="main_nav_holder">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3">
+            <div class="main_nav_holder--img">
+              <img src="{% static 'images/odinai-onlightbluebg.png' %}" class="img-fluid" alt="OdinAI">
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="main_nav_holder_links">
+              <ul>
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">About</a></li>
+                <li><a href="javascript:void(0)">Blog</a></li>
+                <li><a href="javascript:void(0)">AI Survival Guides</a></li>
+                <li><a href="javascript:void(0)">Jobs</a></li>
+              </ul>
+            </div>
+            <div class="ham-btn d-block d-md-none">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <!-- banner[start] -->
+    <section>
+      <div class="main_banner">
+        <div class="container h-100">
+          <div class="row align-items-center h-100">
+            <div class="col-md-6 col-12">
+              <div class="main_banner_content">
+                <h1 class="main_banner_content--head">OdinAI is here to help. We help you learn Deep Learning + connect you to AI jobs.</h1>
+                <h5 class="main_banner_content--desc">Finding a job in Deep Learning is difficult.<br/>We make it easier for you.</h5>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="main_banner_img d-none d-md-block">
+                <img src="{% static 'images/deep-learning-brain.png' %}" class="img-fluid" alt="image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="topmar">
+          <div id="particles-js"></div>
+        </div>
+      </div>
+    </section>
+    <!-- banner[end] -->
+    <!-- lead sections[start]-->
+    <section>
+      <div class="content_area py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 pb-5">
+              <h2 class="common--head">Check out our content</h2>
+              <span class="common--wave">
+                <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4 col-md-6 offset-xl-2 offset-0">
+              <a href="#" class="content_area_btn btn-grad">Deep Learning Colleges Guides</a>
+              <div class="content_area_copy">
+                <p>Content created by college graduates and seniors What courses to take, clubs to join, what professors to work under and
+                more.</p>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+              <a href="#" class="content_area_btn btn-grad">Job guides</a>
+              <div class="content_area_copy">
+                <p>Resources to learn Deep Learning, companies to apply to, and much more.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- lead sections[end]-->
+    <!-- adddon content section[start] -->
+    <section>
+      <div class="content_area_articles pt-2 pb-5">
+        <div class="container">
+          <!-- 1 -->
+          <div class="each_articles">
+            <div class="row align-items-center">
+              <div class="col-md-7 col-12">
+                <div class="content_area_articles_copy">
+                  <h3>Practical guide to<br/>Deep Learning in 6 months</h3>
+                  <p>This article will give you a detailed roadmap to learn Deep Learning and get internships and jobs in 6
+                    months or less.
+                    Practical, result oriented and top down</p>
+                </div>
+              </div>
+              <div class="col-md-5 col-12">
+                <div class="content_area_articles_img">
+                  <img src="{% static 'images/dl-demo-3.png' %}" class="img-fluid" alt="deep learing">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="each_articles">
+            <div class="row align-items-center">
+              <div class="col-md-7 col-12">
+                <div class="content_area_articles_copy">
+                  <h3>An AI survival guide for NIT Trichy</h3>
+                  <p>A Deep Learning road map for NIT Trichy, from the first sem to the last. What courses to take, clubs to join and much
+                  more.</p>
+                </div>
+              </div>
+              <div class="col-md-5 col-12">
+                <div class="content_area_articles_img">
+                  <img src="{% static 'images/dl-dummy.png' %}" class="img-fluid" alt="deep learing">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="each_articles">
+            <div class="row align-items-center">
+              <div class="col-md-7 col-12">
+                <div class="content_area_articles_copy">
+                  <h3>Deep Learning start ups</h3>
+                  <p>A curated list of Deep Learning Star ups to apply to.</p>
+                </div>
+              </div>
+              <div class="col-md-5 col-12">
+                <div class="content_area_articles_img">
+                  <img src="{% static 'images/dl-demo-1.png' %}" class="img-fluid" alt="deep learing">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- adddon content section[end] -->
+    <!-- job section[start] -->
+    <section>
+      <div class="look_job py-5">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col-12">
+              <div class="look_job_content text-center">
+                <h3>Looking for Job?</h3>
+                <p>Check out out Job board. Curated AI jobs, with all the information.</p>
+                <a href="#" class="btn-grad">JOB BOARD</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- job section[end] -->
+    <!-- contributors[start] -->
+    <section>
+      <div class="contributors py-5">
+        <div class="container pb-2">
+          <div class="row">
+            <div class="col-12 pb-2">
+              <h2 class="common--head">Contributors</h2>
+              <span class="common--wave">
+                <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 pb-5">
+              <div class="contributors_content">
+                <p>Made with <span>♥</span> for you by students and alumni from NITT, IITM, PICT -- and counting</p>
+              </div>
+            </div>
+          </div>
+          <div class="contributors_img">
+            <div class="row">
+              <div class="col-md-3 col-12 text-center">
+                <a href="#">
+                  <img src="{% static 'images/conts/1.png' %}" class="img-fluid" alt="contributor">
+                </a>
+              </div>
+              <div class="col-md-3 col-12 text-center">
+                <a href="#">
+                  <img src="{% static 'images/conts/2.png' %}" class="img-fluid" alt="contributor">
+                </a>
+              </div>
+              <div class="col-md-3 col-12 text-center">
+                <a href="#">
+                  <img src="{% static 'images/conts/3.png' %}" class="img-fluid" alt="contributor">
+                </a>
+              </div>
+              <div class="col-md-3 col-12 text-center">
+                <a href="mailto:cbsudu@gmail.com">
+                  <img src="{% static 'images/conts/more.png' %}" class="img-fluid" alt="contributor">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contributors[end] -->
+    <!-- team[start] -->
+    <section>
+      <div class="team py-md-5 py-3">
+        <div class="container pb-2">
+          <div class="row">
+            <div class="col-12 pb-2">
+              <h2 class="common--head">Teams</h2>
+              <span class="common--wave">
+                <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
+              </span>
+            </div>
+          </div>
+          <div class="team_members pt-5">
+            <div class="row">
+              <div class="col-md-4 col-12 offset-md-2">
+                <div class="team_members_each">
+                  <span class="team_members_each--img">
+                    <img src="{% static 'images/sudu.jpg' %}" class="img-fluid" alt="Sudu">
+                  </span>
+                  <span class="team_members_each--content">
+                    <h4>Sudharshan Chandra Babu</h4>
+                    <p>Founder</p>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-12">
+                <div class="team_members_each">
+                  <span class="team_members_each--img">
+                    <img src="{% static 'images/naga.jpg' %}" class="img-fluid" alt="Sudu">
+                  </span>
+                  <span class="team_members_each--content">
+                    <h4>Nagaraj Archak</h4>
+                    <p>Web Development Lead</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about">
+            <div class="row">
+              <div class="col-md-8 col-12 offset-md-2">
+                <div class="about_copy">
+                  <h3>Odin?</h3>
+                  <p>Nine long days did Odin hang, Pierced by his spear as sharp as a fang, free of fear and staring into oblivion, did the
+                  runes then come. Futhark they were, and 18 strong, from fire and from ice, the magic begun.” Odin is the All-Father of
+                  Asgard, the Hall of the Gods. He is the God of War, Knowledge and Wisdom. Odin sacrificed his right eye to drink from
+                  the Well of Urðr, which granted him knowledge of the universe. “</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- team[end] -->
+    <!-- contact us[start] -->
+    <section>
+      <div class="contact py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 pb-2">
+              <h2 class="common--head">Connect with Us</h2>
+              <span class="common--wave">
+                <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="contact_social">
+                <a href="mailto:cbsudu@gmail.com">
+                  <i class="far fa-envelope"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact us[end] -->
+  </main>
+  <footer>
+    <div class="footer_copy">
+      <p class="text-center m-0">&copy; Copyright OdinAI.</p>
+    </div>
+  </footer>
+  <!-- JAVASCRIPT -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="{% static 'js/c-render.js' %}"></script>
+  <script>
+    jQuery(document).ready(function($){
+      // navigation action[start]
+      $(window).on("load scroll",function(){
+        if($(window).scrollTop() > 0){
+          $(".main_nav").addClass("nav-active");
+        }else{
+          $(".main_nav").removeClass("nav-active");
+        }
+      });
+      // navigation action[end]
+      // mobile btn[start]
+      $(".ham-btn").on("click",function(){
+        $(".main_nav_holder_links").toggleClass("mob-active");
+        $(this).find("i").toggleClass("fa-times");
+      });
+      // mobile btn[end]
+    }(jQuery));
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 77,
+            "density": {
+              "enable": true,
+              "value_area": 1203
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 1000
+            },
+            "image": {
+              "src": "img/github.svg",
+              "width": 150,
+              "height": 150
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 4,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 210,
+              "size_min": 0.3,
+              "sync": true
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 224,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": true,
+            "attract": {
+              "enable": true,
+              "rotateX": 1200,
+              "rotateY": 1200
+            }
+          }
+        },
+        "retina_detect": true
+      });
+      //requestAnimationFrame();
+    
+
+  </script>
+</body>
+</html>
+

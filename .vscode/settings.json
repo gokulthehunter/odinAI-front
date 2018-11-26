@@ -1,0 +1,17 @@
+{
+    "git.ignoreLimitWarning": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/static/css/compiled/"
+        }
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "liveSassCompile.settings.includeItems": [
+        "static/css/scss/style.scss",
+    ]
+}

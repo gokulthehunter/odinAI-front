@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>odinAI</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bloglayout.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- FONTS -->
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+<!-- 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Niramit:400,700" rel="stylesheet"> -->
+
+  </head>
+  
+  <div class="navigationbar valign-wrapper">
+    <div class="row  valign-wrapper navbar">
+      <div class="col l4 m7 center valign-wrapper">
+        <div class="col l1 m0"></div>
+        <div class="col l3 m6 center"><a href="{% url 'index'  %}"><img src="{% static 'images/logo.png' %}" class="mainlogo valign-wrapper"/></a></div>
+        <div class="col l2 m3 center"><a href="{% url 'blog'  %}">about</a></div>
+        <div class="col l2 m3 center"><a href="{% url 'blog'  %}">blog</a></div>
+        <div class="col l2 m3 center"><a href="{% url 'job'  %}">jobs</a></div>
+        <div class="col l2 m3 center"><a href="{% url 'blog'  %}">college</a></div>
+      </div>
+
+      <div class="col l2 m0 center"></div>
+     
+      <div class="col l6 m5 valign-wrapper">
+        <div class="col l8 m8 center"></div>
+        <div class="col l2 m1 center"></div>
+        <div class="col l2 m3 left valign-wrapper"><img src="{% static 'images/linkedin.png' %}" class="social"/></div>
+    </div>
+    </div>
+  </div>
+
+
+ 
+  
+  
+
+  <body class="">
+    <!-- <div class="topMostPadding">&nbsp;</div> -->
+    <div class="container mainstuff">
+    {% block content %}{% endblock %}
+    </div>
+
+    <!-- <script>
+        $(document).ready(function(){
+          $(window).scroll(function() { // check if scroll event happened
+            if ($(document).scrollTop() > 10) { // check if user scrolled more than 50 from top of the browser window
+              $(".navigationbar").css("background-color", "#f8f8f8"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+              $(".navigationbar").css("transition", "background-color 0.5s");
+            } else {
+              $(".navigationbar").css("background-color", "transparent"); // if not, change it back to transparent
+              $(".navigationbar").css("transition", "background-color 0.5s");
+            }
+          });
+        });
+
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+        });
+
+    </script> -->
+  </body>
+
+
+  <footer class="page-footer valign-wrapper">
+     
+        <div class="row">
+          <div class="col l3 center">
+            <div class="col l3 center"><a href="{% url 'blog'  %}">about</a></div>
+            <div class="col l3 center"><a href="{% url 'blog'  %}">blog</a></div>
+            <div class="col l3 center">college</div>
+            <div class="col l3 center"><a href="{% url 'job'  %}">jobs</a></div>
+          </div>
+          <div class="col l6 contact"></div>
+          <div class="col l3 center">
+              <div class="col l9 right">Feel free to ping us at hello@odinai.org</div>
+              <div class="col l3"></div>
+            </div>
+        </div>
+        </div>
+      
+    </footer>
+
+  
+
+
+
+
+
+</html>

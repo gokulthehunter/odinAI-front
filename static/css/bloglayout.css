@@ -1,0 +1,63 @@
+/********************************
+           GENERIC CSS
+********************************/
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0; 
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+.mainstuff {
+  padding: 6vmax 0;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+/********************************
+           NAVIGATION BAR
+********************************/
+
+.navigationbar {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0vmax 0;
+  position: fixed;
+  font-size: 0.7em;
+  
+}
+
+ div .navbar {
+  margin-bottom: 0px; 
+} 
+
+.mainlogo {
+  width: 80%;
+}
+
+div .social {
+  width: auto;
+  height: 3em;
+}
+
+.page-footer {
+  font-size: 0.6em;
+  background-color: rgb(0, 85, 134) !important;
+  padding-top: 0px 0 !important;
+}
+
+.page-footer .row {
+  width: 100%;
+}
+
+.page-footer .row .contact {
+  text-align: right;
+}
+
+
