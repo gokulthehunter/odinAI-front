@@ -22,7 +22,9 @@
             @media (max-width:767px){position: fixed;right:-280px;top:0;width: 280px;height:100%;background:#fff;padding-top:50px;}
             
         }
-        .ham-btn{position: absolute;right: 15px;top: -34px;font-size: 26px;}
+        .ham-btn{position: absolute;right: 15px;top: -45px;font-size: 26px;color: #fff;
+            &.active{color: #111;}
+        }
         @media (max-width:1049px){padding: 10px 15px;}
     }
     &.nav-active{
@@ -40,6 +42,7 @@
                         }
                     }
                 }
+                .ham-btn{color: #111;top: -34px;}
                 @media (max-width:1049px){padding:10px 15px;}
             }
         }

@@ -2,269 +2,210 @@
 {% block content %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <title>odinBlogs</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-     <!-- STYLESHEETS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/college.css' %}" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
-    crossorigin="anonymous">
-   
-    <!-- JAVASCRIPT -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-
-    <!-- FONTS -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- STYLESHEETS -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/compiled/style.min.css' %}" />
+</head>
 
-
-  </head>
-
-  <body>
-
-     <!-- HAMBURGER MENU -->
-     <div class="navigation d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
-      <div class="container">
-        <nav class="container row align-items-start">
-          <div class="col-sm-3 col-md-8 navBarElements">
-              <ul>
-                <li><a href="{% url 'index'  %}"><b>home</b></a></li>
-                <li><a href="{% url 'index'  %}"><b>about</b></a></li>
-                <li><a href="{% url 'blog'  %}"><b>blog</b></a></li>
-                <li><a href="{% url 'collegeblog'  %}"><b>college</b></a></li>
-                <li><a href="{% url 'job'  %}"><b>jobs</b></a></li>
-              </ul>
-          </div>
-          <div class="col-sm-6 col-md-8 aboutInNavBar">
-            <span class="aboutOdin"><b>About OdinAI</b></span><br>
-            OdinAI is here to help.
-            We help you efficiently learn Deep Learning and get that Deep Learning job!
-          </div>
-          <div class="col-sm-3 col-md-8 contactInNavBar">
-              <span class="contactInfo"><b>Contact</b></span><br>
-              
-                <a href="#">hello@odinai.org</a><br>
-                <a href="#">LinkedIn</a>
-              
-          </div>
-        </nav>
-      </div>
-    </div>
-    <div class="menu d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
-      <div>
-        <div class="menu-trigger">
-          <div class="bar bar--1"></div>
-          <div class="bar bar--2"></div>
-          <div class="bar bar--3"></div>
-        </div>
-        
-        
-      </div>
-      
-    </div> 
-    
-  
-    <!-- NAVIGATION BAR -->
-    <div class="d-none d-lg-block d-xl-none d-none d-xl-block">
-      <div class="navigationfull row">
-          <div class="col-md-0 col-lg-1 col-xl-1 navBarElements"></div>
-          <div class="col-md-2 col-xl-1 navBarElements justify-content-end align-items-center">
-              <a href="{% url 'index'  %}">
-                  <img src="{% static 'images/odinai-transparent.png' %}" class="odinAILogoNavBar"/>
-              </a>
-          </div>
-          <div class="col-md-3 col-xl-4 navBarElements"></div>
-          <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
-            <a href="{% url 'index'  %}">home</a>
-          </div>
-          <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
-            <a href="{% url 'index'  %}">about</a>
-          </div>
-          <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
-            <a href="{% url 'blog'  %}">blog</a>
-          </div>
-          <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
-            <a href="{% url 'collegeblog'  %}">college</a>
-          </div>
-          <div class="col-md-1 col-xl-1 navBarElements d-flex justify-content-center align-items-center">
-            <a href="{% url 'job'  %}">jobs</a>
-          </div>
-          <div class="col-md-0 col-lg-1 col-xl-1 navBarElements"></div>
-      </div>
-    </div>
-
-    <!-- PAGE 2: BLOG & COLLEGE POSTS  -->
-
-    <div class="blogPostsContainer d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
-        <div class="container blogPage">
-          <div class="row align-items-end bp1">
-            <div class="col"></div>
-            <div class="col-10">
-                    Survival Guide<br>
-                <span class="subContent">Content created by college graduates and seniors who are currently either working in Deep Learning or pursuing research</span>
-                <hr/>
+<body>
+    <!-- navigation -->
+    <nav class="main_nav nav-active">
+        <div class="main_nav_holder">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="main_nav_holder--img">
+                            <img src="{% static 'images/odinai-onlightbluebg.png' %}" class="img-fluid" alt="OdinAI">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="main_nav_holder_links">
+                            <ul>
+                                <li><a href="{% url 'index'  %}">Home</a></li>
+                                <li><a href="{% url 'about'  %}">About</a></li>
+                                <li><a href="{% url 'blog'  %}">Blog</a></li>
+                                <li><a href="{% url 'collegeblog' %}">AI Survival Guides</a></li>
+                                <li><a href="{% url 'job'  %}">Jobs</a></li>
+                            </ul>
+                        </div>
+                        <div class="ham-btn d-block d-md-none">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col"></div>
-          </div>
-    
-          {% for post in CPosts %}
-    
-          <div class="row rowWrapper"> 
-              <div class="col"></div>
-              <div class="col-10">
-                  <div class="postTitle"><a href="{% url 'postDetail' pk=post.pk %}">{{post.cposttitle}}</a></div>
-                  <div class="postImage"><img src="/media/{{post.cimage}}" id="postImageID"/></div>
-                  <div class="postDescription">{{post.cpostsummary}}</div>
-                  <div class="postDate">{{post.ccreated_at|date:"d M Y"}}</div>
-              </div>
-             <div class="col"></div>
-          </div> 
-          <hr/> 
-          {% endfor %}
-    
         </div>
-      </div>
-
-    <!-- PAGE 2: BLOG & COLLEGE POSTS for XL -->
-
-    <div class="blogPostsContainer d-none d-lg-block d-xl-none d-none d-xl-block">
-        <div class="container blogPage">
-          <div class="row align-items-end bp1xl">
-            <div class="col"></div>
-            <div class="col-xl-12">
-                Survival Guide<br>
-                <span class="subContentXL">Content created by college graduates and seniors who are currently either working in Deep Learning or pursuing research</span>
-                <hr/>
+    </nav>
+    <main>
+        <!-- banner[start] -->
+        <section>
+            <div class="main_banner small">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-6 col-12">
+                            <div class="main_banner_content">
+                                <h1 class="main_banner_content--head">Survival Guide</h1>
+                                <h5 class="main_banner_content--desc">Content created by college graduates and seniors who are currently either working in Deep Learning or pursuing research</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topmar">
+                    <div id="particles-js"></div>
+                </div>
             </div>
-            <div class="col"></div>
-          </div>
-    
-          {% for post in CPosts %}
-    
-          <div class="row container rowWrapperXL"> 
-              <div class="col-8">
-                  <div class="postTitlexl"><a href="{% url 'cpostDetail' pk=post.pk %}">{{post.cposttitle}}</a></div>
-                  <div class="postDescriptionxl">{{post.cpostsummary}}</div>
-                  <div class="postDatexl">{{post.ccreated_at|date:"d M Y"}}</div>
-              </div>
-              <div class="col-1"></div>
-              <div class="col-3">
-                  <div class="postImagexl"><img src="/media/{{post.cimage}}" id="postImageID"/></div>
-              </div>
-              
-          </div> 
-          <hr/> 
-          {% endfor %}
-    
+        </section>
+        <!-- banner[end] -->
+        <!-- adddon content section[start] -->
+        <section>
+            <div class="content_area_articles pt-2 pb-5">
+                <div class="container max-960">
+                    <!-- 1 -->
+                    <div class="each_articles">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12">
+                                <div class="content_area_articles_copy">
+                                    <h3>Deep Learning 101 from PICT</h3>
+                                    <p>In the world of fast pacing advances in Artificial Intelligence, one must constantly keep up. Deep Learning is one of
+                                        the most significant contributor to the breakthroughs in Artificial Intelligence. This roadmap will guide you to learn
+                                        Deep Learning through the four years at PICT from absolute basics to conducting your own research.</p>
+                                    </div>
+                                    <div class="pt-2 dated">22 Nov 2018</div>
+                            </div>
+                            <div class="col-md-5 col-12">
+                                <div class="content_area_articles_img">
+                                    <img src="{% static 'images/dl-demo-3.png' %}" class="img-fluid" alt="deep learing">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- adddon content section[end] -->
+        <!-- contact us[start] -->
+        <section>
+            <div class="contact py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 pb-2">
+                            <h2 class="common--head">Connect with Us</h2>
+                            <!-- <span class="common--wave">
+                        <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
+                      </span> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="contact_social">
+                                <a href="mailto:cbsudu@gmail.com">
+                                    <i class="far fa-envelope"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact us[end] -->
+    </main>
+    <footer>
+        <div class="footer_copy">
+            <p class="text-center m-0">&copy; Copyright OdinAI.</p>
         </div>
-    </div>
-
-  <!-- FOOTER -->
-
-  <div class="footerContainer d-block d-sm-none d-none d-sm-block d-md-none d-none d-md-block d-lg-none">
-    <div class="container footerPage">
-      <div class="row align-items-end fp1">
-        <div class="col"></div>
-        <div class="col-10">
-          About OdinAI
-        </div>
-        <div class="col"></div>
-      </div>
-      <div class="row align-items-end fp2">
-        <div class="col"></div>
-        <div class="col-10">
-            We help you efficiently learn Deep Learning and get that Deep Learning job. 
-        </div>
-        <div class="col"></div>
-      </div>
-
-      <div class="row align-items-end fp3">
-          <div class="col"></div>
-          <div class="col-10">
-            Say hi!
-          </div>
-          <div class="col"></div>
-        </div>
-        <div class="row align-items-end fp4">
-          <div class="col"></div>
-          <div class="col-10">
-              Feel free to get in touch with us at hello@odinai.org
-          </div>
-          <div class="col"></div>
-        </div>
-    </div>
-  </div>
-
-  <!-- FOOTER for XL -->
-
-  <div class="footerContainerXL d-none d-lg-block d-xl-none d-none d-xl-block">
-      <div class="container footerPageXL">
-        <div class="row fp1xl">
-          <div class="col-5 title">
-            OdinAI?
-          </div>
-          <div class="col-2"></div>
-          <div class="col-5 title">
-            Say hi!
-          </div>
-        </div>
-        <div class="row fp2xl">
-          <div class="col-5 content">
-              All-father. Badass. Norse god of wisdom and knowledge. A defining feature of Odin is his' being one-eyed, a result of him having sacrificed his right eye to drink from the Well of Urðr, which granted him an incomprehensible amount of knowledge of the universe. 
-          </div>
-          <div class="col-2"></div>
-          <div class="col-5 content">Feel free to get in touch with us at hello@odinai.org</div>
-        </div>
-      </div>
-    </div>
-  
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/c-render.js' %}"></script>
     <script>
-
-        //SIDE NAVIGATION BAR
-        $(document).ready(function(){
-          function openMenu() {
-            $(".menu-trigger").addClass("open");
-            $(".navigation").addClass("nav-open");
-            $(".col-sm-3").addClass("c-in");
-            $(".col-sm-6").addClass("c-in");
-          }
-          function closeMenu() {
-            $(".menu-trigger").removeClass("open");
-            $(".navigation").removeClass("nav-open");
-            $(".col-sm-3").removeClass("c-in");
-            $(".col-sm-6").removeClass("c-in");
-          }
-          $(".menu-trigger").click(function(){
-            if($(".menu-trigger").hasClass("open")) {
-              closeMenu();
-            }
-            else {
-              openMenu();
-            }
-          });
-          $("main").click(function(){
-            if($(".menu-trigger").hasClass("open")) {
-              closeMenu();
-            }
-          });
-          $(document).keyup(function(e) {
-              if (e.keyCode == 27) {
-                closeMenu();
-              }
-          });
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 77,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1203
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 1000
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 150,
+                        "height": 150
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 210,
+                        "size_min": 0.3,
+                        "sync": true
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 224,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": true,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 1200,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "retina_detect": true
         });
-    
-      </script>
+    </script>
 
-  </body>
+</body>
 
 </html>
 {% endblock %}

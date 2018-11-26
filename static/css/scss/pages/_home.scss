@@ -7,7 +7,7 @@
         }
         &--desc{font-size: 1rem;color: #e5e5e5;font-weight: lighter;padding-top: 15px;}
         @media(max-width: 1049px){padding: 0 15px;}
-        @media(max-width: 767px){padding-top: 25%;}
+        // @media(max-width: 767px){padding-top: 20%;}
     }
     &_img{
         img{transform: scale(2);opacity: 0.1;}
@@ -17,6 +17,7 @@
         canvas {display: block;vertical-align: bottom;}
         @media (max-width:992px){display: none;}
     }
+    &.small{height: 70vh;}
     @media (max-width:992px){height: 70vh;}
 }
 // main banner[end]
@@ -40,13 +41,14 @@
 // content area[end]
 // addon content area[start]
 .content_area_articles{background: #fff;
-    .each_articles{padding:75px 0;border-bottom: 1px solid #e5e5e5;
+    .each_articles{padding:50px 0;border-bottom: 1px solid #e5e5e5;
         &:last-child{border:none;}
     }
     &_copy{padding-right: 50px;
         h3{max-width: 500px;font-size: 1.6rem;font-weight: bold;color: #111;}
         p{max-width: 500px;margin-bottom: 0;color: #444;}
-        @media (max-width:767px){padding-bottom: 20px;}
+        .dated{font-size: 0.8rem;color:#888;} 
+        @media (max-width:767px){padding-bottom: 20px;padding-right:0;}
     }
     //&_img{}
     @media (max-width:1049px){padding: 15px;}
@@ -95,7 +97,7 @@
 // about[start]
 .about{
     &_copy{text-align: center;padding-top:40px;
-        h3{color: $color_blue_dark;}
+        h3{color: $color_blue;}
         p{color: #444;font-size: 0.9rem;}
         @media (max-width:767px){padding:15px;}
     }

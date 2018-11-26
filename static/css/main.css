@@ -11,7 +11,7 @@ html, body {
   margin: 0;
 }
 a, a:visited, a:hover {
-  color: inherit;
+  /* color: inherit; */
   transition: 0.2s;
   text-decoration: none;
 }

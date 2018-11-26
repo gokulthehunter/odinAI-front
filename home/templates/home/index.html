@@ -27,11 +27,11 @@
           <div class="col-md-9">
             <div class="main_nav_holder_links">
               <ul>
-                <li><a href="javascript:void(0)">Home</a></li>
-                <li><a href="javascript:void(0)">About</a></li>
-                <li><a href="javascript:void(0)">Blog</a></li>
-                <li><a href="javascript:void(0)">AI Survival Guides</a></li>
-                <li><a href="javascript:void(0)">Jobs</a></li>
+                <li><a href="{% url 'index'  %}">Home</a></li>
+                <li><a href="{% url 'about'  %}">About</a></li>
+                <li><a href="{% url 'blog'  %}">Blog</a></li>
+                <li><a href="{% url 'collegeblog' %}">AI Survival Guides</a></li>
+                <li><a href="{% url 'job'  %}">Jobs</a></li>
               </ul>
             </div>
             <div class="ham-btn d-block d-md-none">
@@ -54,11 +54,11 @@
                 <h5 class="main_banner_content--desc">Finding a job in Deep Learning is difficult.<br/>We make it easier for you.</h5>
               </div>
             </div>
-            <div class="col-6">
+            <!-- <div class="col-6">
               <div class="main_banner_img d-none d-md-block">
                 <img src="{% static 'images/deep-learning-brain.png' %}" class="img-fluid" alt="image">
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="topmar">
@@ -74,9 +74,9 @@
           <div class="row">
             <div class="col-12 pb-5">
               <h2 class="common--head">Check out our content</h2>
-              <span class="common--wave">
+              <!-- <span class="common--wave">
                 <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
-              </span>
+              </span> -->
             </div>
           </div>
           <div class="row">
@@ -101,7 +101,7 @@
     <!-- adddon content section[start] -->
     <section>
       <div class="content_area_articles pt-2 pb-5">
-        <div class="container">
+        <div class="container max-960">
           <!-- 1 -->
           <div class="each_articles">
             <div class="row align-items-center">
@@ -132,7 +132,7 @@
               </div>
               <div class="col-md-5 col-12">
                 <div class="content_area_articles_img">
-                  <img src="{% static 'images/dl-dummy.png' %}" class="img-fluid" alt="deep learing">
+                  <img src="{% static 'images/nn.png' %}" class="img-fluid" alt="deep learing">
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@
               </div>
               <div class="col-md-5 col-12">
                 <div class="content_area_articles_img">
-                  <img src="{% static 'images/dl-demo-1.png' %}" class="img-fluid" alt="deep learing">
+                  <img src="{% static 'images/dl-dummy-4.jpg' %}" class="img-fluid" alt="deep learing">
                 </div>
               </div>
             </div>
@@ -181,9 +181,9 @@
           <div class="row">
             <div class="col-12 pb-2">
               <h2 class="common--head">Contributors</h2>
-              <span class="common--wave">
+              <!-- <span class="common--wave">
                 <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
-              </span>
+              </span> -->
             </div>
           </div>
           <div class="row">
@@ -227,10 +227,10 @@
         <div class="container pb-2">
           <div class="row">
             <div class="col-12 pb-2">
-              <h2 class="common--head">Teams</h2>
-              <span class="common--wave">
+              <h2 class="common--head">Team</h2>
+              <!-- <span class="common--wave">
                 <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
-              </span>
+              </span> -->
             </div>
           </div>
           <div class="team_members pt-5">
@@ -264,7 +264,7 @@
               <div class="col-md-8 col-12 offset-md-2">
                 <div class="about_copy">
                   <h3>Odin?</h3>
-                  <p>Nine long days did Odin hang, Pierced by his spear as sharp as a fang, free of fear and staring into oblivion, did the
+                  <p><em>"Nine long days did Odin hang, Pierced by his spear as sharp as a fang",</em> free of fear and staring into oblivion, did the
                   runes then come. Futhark they were, and 18 strong, from fire and from ice, the magic begun.” Odin is the All-Father of
                   Asgard, the Hall of the Gods. He is the God of War, Knowledge and Wisdom. Odin sacrificed his right eye to drink from
                   the Well of Urðr, which granted him knowledge of the universe. “</p>
@@ -283,9 +283,9 @@
           <div class="row">
             <div class="col-12 pb-2">
               <h2 class="common--head">Connect with Us</h2>
-              <span class="common--wave">
+              <!-- <span class="common--wave">
                 <img src="{% static 'images/wave.png' %}" class="img-fluid" alt="wvae">
-              </span>
+              </span> -->
             </div>
           </div>
           <div class="row">
@@ -327,6 +327,7 @@
       // mobile btn[start]
       $(".ham-btn").on("click",function(){
         $(".main_nav_holder_links").toggleClass("mob-active");
+        $(this).toggleClass("active");
         $(this).find("i").toggleClass("fa-times");
       });
       // mobile btn[end]
