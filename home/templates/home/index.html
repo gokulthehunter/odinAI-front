@@ -21,7 +21,11 @@
         <div class="row align-items-center">
           <div class="col-md-3">
             <div class="main_nav_holder--img">
-              <img src="{% static 'images/odinai-onlightbluebg.png' %}" class="img-fluid" alt="OdinAI">
+              <!-- <img src="{% static 'images/odinai-transparent.png' %}" class="img-fluid" alt="OdinAI"> -->
+              <img src="{% static 'images/odinai-transparent.png' %}" 
+              data-top="{% static 'images/odinai-transparent.png' %}"
+              data-down="{% static 'images/odinai-onlightbluebg.png' %}" 
+              class="img-fluid" alt="OdinAI">
             </div>
           </div>
           <div class="col-md-9">
@@ -319,8 +323,14 @@
       $(window).on("load scroll",function(){
         if($(window).scrollTop() > 0){
           $(".main_nav").addClass("nav-active");
+          var btmImg = $(".main_nav_holder--img img").attr("data-down");
+          $(".main_nav_holder--img img").attr("src", btmImg);
+          console.log(btmImg);
         }else{
           $(".main_nav").removeClass("nav-active");
+          var upImg = $(".main_nav_holder--img img").attr("data-top");
+          console.log(upImg);
+          $(".main_nav_holder--img img").attr("src", upImg);
         }
       });
       // navigation action[end]
